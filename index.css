@@ -1,0 +1,67 @@
+:root {
+    --site-color: rgb(95, 160, 215);
+    --entry-color: rgb(19, 177, 75);
+}
+
+#site-logo {
+    color: white !important;
+    font-family: Lobster, monospace;
+    text-align: center;
+    font-weight: bold;
+}
+
+.entries {
+    background-color: green;
+    background-color: var(--entry-color, green);
+    color: white; 
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    margin: 10px 10px 10px 5px;
+}
+
+.entry-text {
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+.entry-title {
+    font-family: "Indie Flower", cursive;
+    padding: 5px 10px 2px 5px;
+    margin: 5px 5px 5px 5px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.entry-author {
+    font-size: 15px;
+    font-family: serif;
+    padding: 0px 10px 5px 5px;
+    margin: 0px 5px 3px 5px;
+}
+
+.entry-date {
+    font-size: 10px;
+    font-family: sans-serif;
+    font-style: italic;
+}
+
+.entry-image {
+    width: 500px;
+    padding: 0px 10px 5px 5px;
+    margin: 0px 5px 10px 5px;
+}
+
+[type='radio'] {
+    margin: 20px 0px 20px 0px;
+}
+
+[type='checkbox'] {
+    margin: 10px 0px 15px 0px;
+}
+
+body {
+    background-color: lightskyblue;
+    background-color: var(--site-color, lightskyblue);
+}

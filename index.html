@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="reset.css" rel="stylesheet" type="text/css" media="all">
+    <link href="index.css" rel="stylesheet" type="text/css" media="all">
+    <title>The AC Daily</title>
+  </head>
+
+  <body>
+    <h2 id="site-logo"><a href=#>The AC Daily</a></h2>
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Blog</li>
+    </ul>
+
+    <main>
+        <div id="entry-one" class="entries">
+          <h3 class="entry-title">Raymond Appreciation Post</h3>
+          <p class="entry-author">By <a href="#">William Ocampo</a></p>
+          <img class="entry-image" src="images/IMG_0405.jpg" alt="A picture of me with Raymond.">
+          <p class="entry-text">Me flexing Raymond.</p>
+          <p class="entry-date">JUNE 14, 2020</p>
+        </div>
+
+      <div>
+        <p>Things cats love:</p>
+        <ul>
+          <li>cat nip</li>
+          <li>laser pointers</li>
+          <li>lasagna</li>
+        </ul>
+        <p>Top 3 things cats hate:</p>
+        <ol>
+          <li>flea treatment</li>
+          <li>thunder</li>
+          <li>other cats</li>
+        </ol>
+      </div>
+
+      <form action="/submit-cat-photo">
+        <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+        <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
+        <label><input type="checkbox" name="personality" checked> Loving</label>
+        <label><input type="checkbox" name="personality"> Lazy</label>
+        <label><input type="checkbox" name="personality"> Energetic</label><br>
+        <input type="text" placeholder="cat photo URL" required>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
