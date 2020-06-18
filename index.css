@@ -3,11 +3,25 @@
     --entry-color: rgb(19, 177, 75);
 }
 
+body {
+    background-color: lightskyblue;
+    background-color: var(--site-color, lightskyblue);
+}
+
+a:hover {
+    color: blue;
+}
+
 #site-logo {
-    color: white !important;
     font-family: Lobster, monospace;
     text-align: center;
     font-weight: bold;
+    font-size: 23px;
+}
+
+.site-logo-color {
+    color: white;
+    text-decoration: unset;
 }
 
 .entries {
@@ -19,11 +33,7 @@
     border-width: 1px;
     border-radius: 10px;
     margin: 10px 10px 10px 5px;
-}
-
-.entry-text {
-    font-size: 14px;
-    font-family: sans-serif;
+    width: 523px;
 }
 
 .entry-title {
@@ -31,7 +41,6 @@
     padding: 5px 10px 2px 5px;
     margin: 5px 5px 5px 5px;
     font-weight: bold;
-    text-decoration: underline;
 }
 
 .entry-author {
@@ -39,18 +48,33 @@
     font-family: serif;
     padding: 0px 10px 5px 5px;
     margin: 0px 5px 3px 5px;
+    opacity: 0.8;
+}
+
+.name {
+    color: black;
+}
+
+.entry-image {
+    width: 500px;
+    padding: 0px 5px 5px 5px;
+    margin: 0px 5px 1px 5px;
+}
+
+.entry-text {
+    font-size: 14px;
+    font-family: Lato, sans-serif;
+    padding: 0px 5px 0px 5px;
+    margin: 0px 5px 0px 5px;
+    line-height: 1.5em; 
 }
 
 .entry-date {
     font-size: 10px;
     font-family: sans-serif;
-    font-style: italic;
-}
-
-.entry-image {
-    width: 500px;
-    padding: 0px 10px 5px 5px;
-    margin: 0px 5px 10px 5px;
+    padding: 0px 10px 2px 5px;
+    margin: 0px 5px 5px 5px;
+    text-align: right;
 }
 
 [type='radio'] {
@@ -59,9 +83,4 @@
 
 [type='checkbox'] {
     margin: 10px 0px 15px 0px;
-}
-
-body {
-    background-color: lightskyblue;
-    background-color: var(--site-color, lightskyblue);
 }
