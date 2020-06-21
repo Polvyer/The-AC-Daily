@@ -7,6 +7,48 @@ body {
     background: linear-gradient(90deg, var(--site-color, lightskyblue), rgb(140, 226, 247)) !important;
 }
 
+.stars {
+    position: absolute;
+    background-color: white;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+.star-1 {
+    left: 34em;
+    animation-name: twinkle-1;
+    animation-timing-function: ease-out;
+}
+
+.star-2 {
+    left: 44.3em;
+    animation-name: twinkle-2;
+    animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
+}
+
+@keyframes twinkle-1 {
+    50% {
+        left: 33em;
+    }
+    100% {
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+  }
+
+@keyframes twinkle-2 {
+    50% {
+        left: 45.3em;
+    }
+    100% {
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+}
+
 /* CSS Moon Graphic */
 #moon {
     position: absolute;
