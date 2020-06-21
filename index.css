@@ -4,7 +4,7 @@
 }
 
 body {
-    background: linear-gradient(90deg, var(--site-color, lightskyblue), rgb(140, 226, 247));
+    background: linear-gradient(90deg, var(--site-color, lightskyblue), rgb(140, 226, 247)) !important;
 }
 
 /* CSS Moon Graphic */
@@ -31,6 +31,9 @@ body {
     width: 43px;
     transform: rotate(45deg);
     z-index: 2;
+    animation: beating;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
 #heart::after {
     position: absolute;
@@ -52,11 +55,32 @@ body {
     border-radius: 50%;
     z-index: 2;
 }
+@keyframes beating {
+    0% {
+        transform: scale(1) rotate(45deg);
+    }
+    50% {
+        transform: scale(0.9) rotate(45deg);
+    }
+}
 
-/* Changes text color of <a> elements when hovering over them */
-a:hover {
+/* Changes text color of site logo when hovering over it */
+.site-logo-link:hover {
+    animation: logo;
+    animation-duration: 1s; /* Change happens within set time */
+    animation-iteration-count: infinite; /* Infinitely re-iterates animation */
+}
+@keyframes logo {
+    100% {
+        color: blue;
+    }
+}
+
+/* Changes text color of .change elements (nav links and author name) when hovering over them */
+.change:hover {
     animation: colorful;
-    animation-duration: 3s;
+    animation-duration: 1s; /* Change happens within set time */
+    animation-fill-mode: forwards; /* Ensures the text color remains changed while hovering */
 }
 @keyframes colorful {
     100% {
@@ -71,6 +95,7 @@ a:hover {
 }
 
 #site-logo {
+    position: relative;
     text-align: center;
     font-family: Lobster, monospace;
     font-weight: bold;
@@ -78,6 +103,7 @@ a:hover {
     transform: scale(0.95); /* Adjusts size by % */
     margin-top: 5px;
     transform: skewX(10deg); /* Makes cursive font (Lobster) normal */
+    z-index: 1;
 }
 
 /* Changes size of site logo when hovering over it */
