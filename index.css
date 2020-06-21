@@ -4,31 +4,31 @@
 }
 
 body {
-    background: linear-gradient(90deg, var(--site-color, lightskyblue), rgb(140, 226, 247)) !important;
+    background: #d8ccb6;
 }
 
+/* CSS Star Animation */
 .stars {
-    position: absolute;
+    position: fixed;
     background-color: white;
     height: 25px;
     width: 25px;
     border-radius: 50%;
-    animation-iteration-count: infinite;
-    animation-duration: 1s;
+    animation-iteration-count: infinite; /* Repeats the animation infinitely */
+    animation-duration: 1s; /* Length of animation */
+    z-index: 2;
+    top: 0.3em;
 }
-
 .star-1 {
     left: 34em;
     animation-name: twinkle-1;
     animation-timing-function: ease-out;
 }
-
 .star-2 {
     left: 44.3em;
     animation-name: twinkle-2;
-    animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
+    animation-timing-function: cubic-bezier(0, 0, 0.58, 1); /* (x1, y1, x2, y2) change of animation / change of time */
 }
-
 @keyframes twinkle-1 {
     50% {
         left: 33em;
@@ -38,7 +38,6 @@ body {
         opacity: 0.5;
     }
   }
-
 @keyframes twinkle-2 {
     50% {
         left: 45.3em;
@@ -61,7 +60,7 @@ body {
     z-index: 2;
 }
 
-/* CSS Heart Graphic 
+/* CSS Heart Graphic / Animation
    ::before added before selected element
    ::after added after selected element */
 #heart {
@@ -106,18 +105,6 @@ body {
     }
 }
 
-/* Changes text color of site logo when hovering over it */
-.site-logo-link:hover {
-    animation: logo;
-    animation-duration: 1s; /* Change happens within set time */
-    animation-iteration-count: infinite; /* Infinitely re-iterates animation */
-}
-@keyframes logo {
-    100% {
-        color: blue;
-    }
-}
-
 /* Changes text color of .change elements (nav links and author name) when hovering over them */
 .change:hover {
     animation: colorful;
@@ -137,25 +124,39 @@ body {
 }
 
 #site-logo {
-    position: relative;
+    background: #9e8364;
+    width: 100%; /* Stretches out to the entire page */
+    position: fixed;
     text-align: center;
     font-family: Lobster, monospace;
     font-weight: bold;
     font-size: 23px;
-    transform: scale(0.95); /* Adjusts size by % */
-    margin-top: 5px;
-    transform: skewX(10deg); /* Makes cursive font (Lobster) normal */
+    padding-top: 5px;
+    padding-bottom: 7px;
     z-index: 1;
 }
 
-/* Changes size of site logo when hovering over it */
-#site-logo:hover {
-    transform: scale(1.1);
+.site-logo-link {
+    display: inline-block; /* Treats <a> element like an inline-block element */
+    transform: skewX(10deg); /* Makes cursive font (Lobster) normal */
+}
+
+/* Changes text color of site logo when hovering over it */
+.site-logo-link:hover {
+    transform: scale(1) skewX(0deg); /* Adjusts size by % and re-adjusts font*/
+    animation: logo;
+    animation-duration: 1s; /* Change happens within set time */
+    animation-iteration-count: infinite; /* Infinitely re-iterates animation */
+}
+@keyframes logo {
+    100% {
+        color: blue;
+    }
 }
 
 #nav-bar {
     position: fixed;
-    top: 34px; /* px below browser window */
+    top: 33px; /* px below browser window */
     width: 100%; /* Stretches out to the entire page */
     background-color: #333;
     text-align: center;
@@ -171,9 +172,13 @@ nav li {
     padding: 4px;
 }
 
+main {
+    background: linear-gradient(90deg, var(--site-color, lightskyblue), rgb(140, 226, 247));
+}
+
 .entries {
     background-color: green; /* Backup in case var doesn't work */
-    background-color: var(--entry-color, green);
+    background-color: #7a904d;
     color: white; 
     border-color: black;
     border-style: solid;
