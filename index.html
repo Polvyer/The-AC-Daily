@@ -19,6 +19,15 @@
     <div id="heart"></div>
     -->
 
+    <div class="theme">
+      <label for="themes">Choose a theme:</label>
+      <select name="themes" id="theme">
+        <option value="">Select</option>
+        <option value="black">Black</option>
+        <option value="white">White</option>
+      </select>
+    </div>
+
     <scroll>
       <h2 id="site-logo"><a href="#" class="links site-logo-link">The AC Daily</a></h2>
 
@@ -32,25 +41,43 @@
     </scroll>
 
     <main>
-      <div id="entry-one" class="entries left">
-        <h3 class="entry-title">Raymond Appreciation Post</h3>
-        <p class="entry-author">By <a href="#" class="name change">William Ocampo</a></p>
-        <img class="entry-image" src="images/IMG_0405.jpg" alt="A picture of me with Raymond.">
-        <p class="entry-text">The first post of this blog has to be about me flexing Raymond. I think I must have spent like about 50 NMT to roll him. At the time, I wasn't super rich in the game, so I had to 
-        sell any valuable items I had on me, including like 1 stack of gold nuggets (I'm dumb, I know) for any NMT. I even begged most of my friends to give me any little NMT they could spare. Needless to say, I was pretty desperate.
-        The desperation was worth it.</p>
-        <p class="entry-date">JUNE 14, 2020</p>
-      </div>
+      <div id="group1">
+        <div id="entry-one" class="entries left">
+          <h3 class="entry-title">Raymond Appreciation Post</h3>
+          <p class="entry-author">By <a href="#" class="name change">William Ocampo</a></p>
+          <img class="entry-image" src="images/IMG_0405.jpg" alt="A picture of me with Raymond.">
+          <p tabindex="0" class="entry-text">The first post of this blog has to be about me flexing Raymond. I think I must have spent like about 50 NMT to roll him. At the time, I wasn't super rich in the game, so I had to 
+          sell any valuable items I had on me, including like 1 stack of gold nuggets (I'm dumb, I know) for any NMT. I even begged most of my friends to give me any little NMT they could spare. Needless to say, I was pretty desperate.
+          The desperation was worth it.</p>
+          <p class="entry-date"><time datetime="2020-06-14">JUNE 14, 2020</time></p>
+        </div>
 
-      <div id="entry-two" class="entries right">
-        <h3 class="entry-title">Judy Appreciation Post</h3>
-        <p class="entry-author">By <a href="#" class="name change">William Ocampo</a></p>
-        <img class="entry-image" src="images/IMG_0405.jpg" alt="A picture of me with Judy.">
-        <p class="entry-text">The first post of this blog has to be about me flexing Raymond. I think I must have spent like about 50 NMT to roll him. At the time, I wasn't super rich in the game, so I had to 
-        sell any valuable items I had on me, including like 1 stack of gold nuggets (I'm dumb, I know) for any NMT. I even begged most of my friends to give me any little NMT they could spare. Needless to say, I was pretty desperate.
-        The desperation was worth it.</p>
-        <p class="entry-date">JUNE 19, 2020</p>
+        <div id="entry-two" class="entries right">
+          <h3 class="entry-title">Judy Appreciation Post</h3>
+          <p class="entry-author">By <a href="#" class="name change">William Ocampo</a></p>
+          <img class="entry-image" src="images/IMG_0405.jpg" alt="A picture of me with Judy.">
+          <p tabindex="0" class="entry-text">The first post of this blog has to be about me flexing Raymond. I think I must have spent like about 50 NMT to roll him. At the time, I wasn't super rich in the game, so I had to 
+          sell any valuable items I had on me, including like 1 stack of gold nuggets (I'm dumb, I know) for any NMT. I even begged most of my friends to give me any little NMT they could spare. Needless to say, I was pretty desperate.
+          The desperation was worth it.</p>
+          <p class="entry-date"><time datetime="2020-06-19">JUNE 19, 2020</time></p>
+        </div>
       </div>
+    </main>
+
+      <form>
+        <!--control + alt + accesskey-->
+        <label accesskey="n" for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="pickdate">Date Inputted:</label>
+        <input type="date" id="pickdate" name="date">
+      </form>
+
+      <audio controls>
+        <source src="SteepHill.mp3" type="audio/mpeg"/>
+      </audio>
+
+      <footer>&copy; 2020 William Ocampo</footer>
 
       <!--
       <div>
@@ -69,8 +96,12 @@
       </div>
 
       <form action="/submit-cat-photo">
-        <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
-        <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
+        <fieldset>
+        <legend>Indoor or Outdoor?</legend>
+          <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+          <label><input type="radio" name="indoor-outdoor"> Outdoor</label>
+        </fieldset>
+        <br>
         <label><input type="checkbox" name="personality" checked> Loving</label>
         <label><input type="checkbox" name="personality"> Lazy</label>
         <label><input type="checkbox" name="personality"> Energetic</label><br>
@@ -78,6 +109,6 @@
         <button type="submit">Submit</button>
       </form>
       -->
-    </main>
   </body>
+  <script src="index.js"></script>
 </html>

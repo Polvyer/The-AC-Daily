@@ -105,6 +105,14 @@ body {
     }
 }
 
+/* Adjusts selection of theme option */
+.theme {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 3;
+}
+
 /* Changes text color of .change elements (nav links and author name) when hovering over them */
 .change:hover {
     animation: colorful;
@@ -172,8 +180,11 @@ nav li {
     padding: 4px;
 }
 
-main {
-    background: linear-gradient(90deg, var(--site-color, lightskyblue), rgb(140, 226, 247));
+#group1 {
+    padding-top: 13vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .entries {
@@ -184,23 +195,7 @@ main {
     border-style: solid;
     border-width: 1px;
     border-radius: 10px;
-    margin: 8px;
-}
-
-.left {
-    position: absolute;
-    top: 75px;
-    left: 5%;
-    float: left;
-    width: 41%; /* Adjusts div container size */
-}
-
-.right {
-    position: absolute;
-    top: 75px; /* px from <html> box b/c nearest ancestor with relative positioning */
-    left: 53%; /* % from <html> box */
-    float: right;
-    width: 41%; /* Adjusts div container size */
+    width: 41%;
 }
 
 .entry-title {
@@ -226,9 +221,10 @@ main {
 }
 
 .entry-image {
-    width: 500px;
-    padding: 0px 5px 5px 5px;
-    margin: 0px 5px 1px 5px;
+    max-width: 100%; /* Ensures the image is never wider than the container it is in */
+    height: auto; /* Ensures the image keeps its original aspect ratio */
+    width: 93%;
+    margin: 0.5vw 0.5vw 0.5vw 1.2vw;
 }
 
 .entry-text {
@@ -237,7 +233,7 @@ main {
     padding: 0px 5px 0px 10px;
     margin: 0px 5px 0px 5px;
     line-height: 1.5em; /* Adjusts space between each line of text */
-    color: rgba(0, 0, 0, 0.75); 
+    color: rgba(1, 0, 0, 1); 
 }
 
 .entry-date {
@@ -246,6 +242,24 @@ main {
     padding: 0px 10px 2px 5px;
     margin: 0px 5px 5px 5px;
     text-align: right;
+}
+
+form {
+    position: absolute;
+    top: 42.5em;
+    margin-left: 5px;
+}
+
+audio {
+    position: absolute;
+    top: 42.5em;
+    left: 30em;
+}
+
+footer {
+    position: absolute;
+    top: 46em;
+    margin: 5px;
 }
 
 [type='radio'] {
